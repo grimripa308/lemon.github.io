@@ -3,51 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>John Snow - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <h2>My Portfolio</h2>
-            <ul>
+            <h2>John Snow</h2>
+            <button id="menu-toggle" class="menu-btn">☰</button>
+            <ul id="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="dark-toggle" class="dark-btn">🌙</button>
         </nav>
     </header>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
-            <p>Web Developer & Designer creating amazing experiences.</p>
-            <button class="btn">View Projects</button>
+            <h1>Hi, I'm <span class="highlight">John Snow</span></h1>
+            <p>Web Developer & Data Analyst creating interactive experiences.</p>
+            <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
         </div>
     </section>
 
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>Passionate about building responsive websites with HTML, CSS, and modern tools. Student in IT and Business Analytics from Nairobi.</p>
+        <p>IT student from Nairobi specializing in business analytics, networking, and modern web development. Passionate about AI tools and responsive design.</p>
     </section>
 
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-grid">
-            <div class="project-card">
+            <div class="project-card" data-modal="project1">
                 <h3>Project 1</h3>
-                <p>A simple responsive site.</p>
+                <p>Responsive Portfolio Site</p>
+                <button class="details-btn">Details</button>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-modal="project2">
                 <h3>Project 2</h3>
-                <p>Data analytics dashboard.</p>
+                <p>Data Dashboard</p>
+                <button class="details-btn">Details</button>
             </div>
         </div>
     </section>
 
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
     <footer id="contact">
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
+        <p>&copy; 2026 John Snow. All rights reserved. | Nairobi, KE</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-</html>
+    </html>
