@@ -1,1 +1,1 @@
-https://github.com/grimripa308/lemon.github.io.git
+https://grimripa308.github.io/lemon.github.io/
